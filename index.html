@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metric/Imperial unit conversion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Metric/Imperial unit conversion</h1>
+        <input
+          type="number"
+          max="999"
+          id="user-input-el"
+          onclick="clearAllConversionFields()"
+          oninput="metricImperialConversion()"
+        />
+      </header>
+      <main>
+        <div class="conversion-container">
+          <p class="conversion-header">Length (Meter/Feet)</p>
+          <p class="conversion-result">
+            <span id="meters-input-el"></span> meters =
+            <span id="feet-calculated-el"></span> feet |
+            <span id="feet-input-el"></span> feet =
+            <span id="meters-calculated-el"></span> meters
+          </p>
+        </div>
+        <div class="conversion-container">
+          <p class="conversion-header">Volume (Liters/Gallons)</p>
+          <p class="conversion-result">
+            <span id="liters-input-el"></span> liters =
+            <span id="gallons-calculated-el"></span> gallons |
+            <span id="gallons-input-el"></span> gallons =
+            <span id="liters-calculated-el"></span> liters
+          </p>
+        </div>
+        <div class="conversion-container">
+          <p class="conversion-header">Mass (Kilograms/Pounds)</p>
+          <p class="conversion-result">
+            <span id="kilos-input-el"></span> kilos =
+            <span id="pounds-calculated-el"></span> pounds |
+            <span id="pounds-input-el"></span> pounds =
+            <span id="kilos-calculated-el"></span> kilos
+          </p>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
